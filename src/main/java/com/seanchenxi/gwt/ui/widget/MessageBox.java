@@ -37,22 +37,22 @@ public class MessageBox {
     @Source(Style.DEFAULT_CSS)
     Style messageBoxStyle();
     
-    @Source("com/seanchenxi/gwt/ui/resource/image/messageBox/icon-error.gif")
+    @Source("com/seanchenxi/gwt/ui/resource/image/icon-error.gif")
     ImageResource icon_MsgBox_error();
 
-    @Source("com/seanchenxi/gwt/ui/resource/image/messageBox/icon-info.gif")
+    @Source("com/seanchenxi/gwt/ui/resource/image/icon-info.gif")
     ImageResource icon_MsgBox_info();
 
-    @Source("com/seanchenxi/gwt/ui/resource/image/messageBox/icon-question.gif")
+    @Source("com/seanchenxi/gwt/ui/resource/image/icon-question.gif")
     ImageResource icon_MsgBox_question();
 
-    @Source("com/seanchenxi/gwt/ui/resource/image/messageBox/icon-warning.gif")
+    @Source("com/seanchenxi/gwt/ui/resource/image/icon-warning.gif")
     ImageResource icon_MsgBox_warning();
   }
 
   @CssResource.ImportedWithPrefix("mb")
   public interface Style extends CssResource {
-    String DEFAULT_CSS = "com/seanchenxi/gwt/ui/widget/MessageBox.css";
+    String DEFAULT_CSS = "com/seanchenxi/gwt/ui/resource/css/MessageBox.css";
     
     int containerCellPadding();
     int containerCellSpacing();

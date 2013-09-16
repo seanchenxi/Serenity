@@ -18,7 +18,6 @@ package com.seanchenxi.gwt.ui.widget;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.ScheduledCommand;
-import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.FocusEvent;
@@ -43,7 +42,7 @@ public class SearchBox extends PopupPanel implements FocusHandler,
   public interface Resources extends ClientBundle {
 
     public interface Style extends CssResource {
-      final static String DEFAULT_CSS = "com/seanchenxi/gwt/ui/widget/SearchBox.css";
+      final static String DEFAULT_CSS = "com/seanchenxi/gwt/ui/resource/css/SearchBox.css";
       String popSearchBox();
       String popSearchField();
       String popSearchButton();
