@@ -1,0 +1,47 @@
+<!--
+  ~ Copyright 2013 Xi CHEN
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:with field="resource" type="com.seanchenxi.gwt.serenity.client.view.impl.RespondViewImpl.Resources" />
+    <g:HTMLPanel>
+		<h3>
+			<span ui:field="titleLbl" />
+			<g:Anchor styleName="{resource.style.respondCancel}" ui:field="cancel" />
+		</h3>
+		<p class="{resource.style.respondDescription}" ui:field="description" />
+		<p class="input-half">
+			<label class="{resource.style.respondLbl}" ui:field="nameLbl" />
+			<g:TextBox styleName="{resource.style.respondInput}" tabIndex="1" ui:field="authorField" />
+		</p>
+		<p class="input-half">
+			<label class="{resource.style.respondLbl}" ui:field="mailLbl" />
+			<input type="email" class="{resource.style.respondInput}" tabIndex="2" ui:field="emailField" />
+		</p>
+		<p class="input-half">
+			<label class="{resource.style.respondLbl}" ui:field="siteLbl" />
+			<input type="url" class="{resource.style.respondInput}" tabIndex="2" ui:field="urlField" />
+		</p>
+		<p id="message-box">
+			<label class="{resource.style.respondLbl}" ui:field="msgLbl" />
+			<g:TextArea styleName="{resource.style.respondTextarea}" tabIndex="3" ui:field="commentField" />
+		</p>
+		<p id="submit-form">
+			<g:Button styleName="{resource.style.respondButton}" ui:field="submit" tabIndex="4" />
+		</p>
+		<br/>
+	</g:HTMLPanel>
+</ui:UiBinder>

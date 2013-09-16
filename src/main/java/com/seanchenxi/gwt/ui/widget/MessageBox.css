@@ -1,0 +1,69 @@
+/*
+ * Copyright 2013 Xi CHEN
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@def containerCellPadding 0;
+@def containerCellSpacing 5;
+@def containerWidth 100%;
+@def containerHeight 100%;
+
+.messageBox {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #222;
+    background-color: rgba(25, 25, 25, 0.92);
+    color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
+}
+
+@if user.agent safari {
+    .messageBox {
+        \-webkit-border-radius: 4px;
+        \-webkit-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
+    }
+} @elif user.agent geck1_8{
+    .messageBox {
+        \-moz-border-radius: 4px;
+        \-moz-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
+    }
+} @elif user.agent opera{
+    .messageBox {
+        \-o-border-radius: 4px;
+        \-o-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
+    }
+} @else {
+    .messageBox {
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.messageBoxCaption{
+    cursor: move;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.messageBoxIconCell{
+    vertical-align: middle;
+    text-align: center;
+    width: 50px;
+}
+
+.messageBoxButtonCell{
+    vertical-align: bottom;
+    text-align: center;
+    width: 25px;    
+}

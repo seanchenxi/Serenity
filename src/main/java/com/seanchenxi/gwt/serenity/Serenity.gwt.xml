@@ -1,0 +1,60 @@
+<!--
+  ~ Copyright 2013 Xi CHEN
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<module rename-to='serenity'>
+
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name="com.google.gwt.activity.Activity"/>
+  <inherits name="com.google.gwt.place.Place"/>
+  <inherits name="com.google.gwt.i18n.I18N"/>
+  
+  <inherits name="com.seanchenxi.gwt.logging.Logging"/>
+  <inherits name='com.seanchenxi.gwt.wordpress.WpJson'/>
+  <inherits name="com.seanchenxi.gwt.ui.UI"/>
+  <inherits name="com.seanchenxi.gwt.util.Util" />
+  
+  <entry-point class='com.seanchenxi.gwt.serenity.client.Serenity'/>
+  
+  <replace-with class="com.seanchenxi.gwt.serenity.client.view.impl.SerenityLayoutImpl">
+    <when-type-is class="com.seanchenxi.gwt.serenity.client.view.SerenityLayout"/>
+  </replace-with>
+  
+  <replace-with class="com.seanchenxi.gwt.serenity.client.view.impl.SidebarImpl">
+    <when-type-is class="com.seanchenxi.gwt.serenity.client.view.Sidebar"/>
+  </replace-with>
+  
+  <replace-with class="com.seanchenxi.gwt.serenity.client.view.impl.ContentListViewImpl">
+    <when-type-is class="com.seanchenxi.gwt.serenity.client.view.ContentListView"/>
+  </replace-with>
+  
+  <replace-with class="com.seanchenxi.gwt.serenity.client.view.impl.ArticleViewImpl">
+    <when-type-is class="com.seanchenxi.gwt.serenity.client.view.ArticleView"/>
+  </replace-with>
+  
+  <replace-with class="com.seanchenxi.gwt.serenity.client.view.impl.RespondViewImpl">
+    <when-type-is class="com.seanchenxi.gwt.serenity.client.view.RespondView"/>
+  </replace-with>
+  
+  <replace-with class="com.seanchenxi.gwt.serenity.client.view.impl.DiscussionListViewImpl">
+    <when-type-is class="com.seanchenxi.gwt.serenity.client.view.DiscussionListView"/>
+  </replace-with>
+
+  <!--<set-configuration-property name="CssResource.style" value="stable-notype" />-->
+  
+  <source path='client'/>
+  <source path='share'/>
+  
+</module>

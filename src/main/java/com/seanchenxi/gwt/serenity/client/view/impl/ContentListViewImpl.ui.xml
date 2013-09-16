@@ -1,0 +1,31 @@
+<!--
+  ~ Copyright 2013 Xi CHEN
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:with field="resource" type="com.seanchenxi.gwt.serenity.client.view.impl.ContentListViewImpl.Resources" />
+  <g:HTMLPanel styleName="{resource.style.listContainer}">
+    <g:ScrollPanel styleName="{resource.style.listScroller}" ui:field="scroller">
+      <g:FlowPanel styleName="{resource.style.listBody}" ui:field="listBody" />
+    </g:ScrollPanel>
+    <g:HTML styleName="{resource.style.listTitle}" ui:field="titleField" />
+    <g:FlowPanel styleName="{resource.style.listPagingControl}">
+      <g:HTML styleName="{resource.style.listPagingInfoLbl}" ui:field="pagingInfoLbl" />
+      <g:HTML styleName="{resource.style.listPagingControlLbl}" ui:field="newer" HTML="&lt;" />
+      <g:HTML styleName="{resource.style.listPagingControlLbl}" ui:field="older" HTML="&gt;" />
+    </g:FlowPanel>
+  </g:HTMLPanel>
+</ui:UiBinder>
